@@ -1,0 +1,32 @@
+
+///////////////// HTML <!DOCTYPE> DECLARATION /////////////////
+
+As the name suggests, <!DOCTYPE> is used in HTML to specify the type of document. It is the first line of code and appears above the <html> tage.
+    The <!DOCTYPE HTMLT> declaration is an instruction to the browser about what version of HTML the page is written in. This ensures that the web
+page is parsed in the same way by different browsers. 
+
+///////////////// EMMET /////////////////
+
+EMMET is a plugin for editors that allows for faster and more efficient HTML and CSS coding. It allows developers to write HTML and CSS code using 
+Shorthand notation, which is then expanded into full code by the plugin.
+    EMMET can be used with HTML by installing the plugin in a text editor and then using the shorthand elements, nesting elements, adding classes 
+and IDs, adding attributes, and more.
+    The main benefit of using Emmet with html is increased productivity and faster coding. Emmet also has lot of built-in snippets and other 
+features that can help to speed up the development process.
+
+///////////////// Library V/S Framework /////////////////
+
+Developers often to use the terms "library" and "framework" interchangeably. But there is a difference.
+
+Both frameworks and libraries are code written by someone else that is used to help solve common problems.
+
+The technical difference between a framework and a library lies in a term called inversion of control.
+    When you use a library, you're in charge of the flow of the application. You are choosing when and where to call the library. When you use a 
+framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it calls the code you plugged in as 
+needed.
+
+In summary
+👉 Framework and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
+👉 A framework inverts the control of the program. It tells the developer what they need. A library doesn't. The programmer calls library where 
+   and when they need it.
+👉 The degree of freedom a library or framework gives the developer will dictate how "opinionated" it is.

@@ -91,6 +91,16 @@ you need to display something on the screen. This makes it easier and more effic
 
 The HTML <script> crossorigin Attribute is used for loading an external script into their domain from a third party server or another domain with 
 the support of HTTP CORS Request. This attribute is used to protect sensitive information from the third party when fetching out the results.
+protect sensitive information from the third party when fetching out the results.
+    Cross-Origin Resource Sharing(CORS) is a tool that allows web pages requesting for resources from another domain that is outside of their own 
+domain. It is also used for managing cross-origin requests which is a request for a resource from an outside domain.
+
+Syntax: <script crossorigin="anonymous | use-credential">
+
+Attribute values
+👉 anonymous: It has a default value. It defines a CORS request will be sent without passing the credential information.
+👉 use-credential: A cross-origin request will be sent with credential, cookies, and certificate.
+Note: This attribute is only valid for use if we try to fetch the resources from the third party domain.
 
 
 

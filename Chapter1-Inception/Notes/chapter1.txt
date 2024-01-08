@@ -102,6 +102,28 @@ Attribute values
 👉 use-credential: A cross-origin request will be sent with credential, cookies, and certificate.
 Note: This attribute is only valid for use if we try to fetch the resources from the third party domain.
 
+///////////////// React and ReactDOM /////////////////
 
+React and ReactDOM are both fundamental parts of the React ecosystem, but they serve distinct roles.
+
+React is, at its core, a library for building user interfaces. It introduces the concept of components, which allow developers to craft reusable 
+and self-contained UI elements. These components define how a user interface should appear based on given inputs (props and state). React operates 
+with a virtual representation of the DOM, known as the Virtual DOM, which is an abstraction of the actual browser’s DOM. By working with this 
+abstraction, React can determine the most efficient way to update the browser’s DOM when data changes, leading to efficient and performant UI 
+updates.
+
+ReactDOM, on the other hand, acts as the glue between React’s Virtual DOM and the actual browser’s DOM. It provides the means to render React 
+components into the DOM. The primary method it offers is `ReactDOM.render()`, which is used to take a React component and render it into a 
+specified DOM node. Additionally, ReactDOM provides utilities for directly interacting with the DOM, like `findDOMNode()` (though its use is often 
+discouraged in favor of more “React-ish” approaches). Importantly, ReactDOM is specific to web browsers.
+
+The reason for this separation is React’s design philosophy to be platform-agnostic. While ReactDOM deals with web-specific rendering, there are 
+other renderers like React Native (for mobile apps) or ReactVR (for virtual reality) that leverage the core React library to target different 
+platforms. By decoupling the core definitions of components from the platform-specific rendering logic, React becomes a versatile solution for 
+various environments.
+
+///////////////// Dev. CDN && Prod. CDN /////////////////
+
+Both React and ReactDOM both are available over a CDN.
 
 

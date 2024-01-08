@@ -59,3 +59,19 @@ Type of CDN
     requests web resources, the nearest CDN has a neat package populated with the web content. It then seamlessly delivers them to the browser.
 👉 Pull CDN: When it comes to pull CDN, the web content is cached in the nearest PoP server only after the first request has been made. Instead 
     of calling the server every time, during the first request, the data is actually pulled from the hosted server and cached at CDN PoP servers.
+
+A CDN (Content Delivery Network) link typically consists of several components that work together to deliver content efficiently across the 
+internet. Here's a breakdown of what you might find in a CDN link:
+
+👉 Protocol: The protocol used for communication, usually either "http://" or "https://".
+
+👉 CDN Domain: The domain name or subdomain of the CDN provider. For example, if you are using a CDN service like Cloudflare, the link might 
+    include their domain, such as "cdn.cloudflare.com".
+
+👉 Resource Path: The path to the specific resource or file you are requesting. This could include directories and filenames.
+
+👉 Versioning or Cache Busting: Some CDN links include version numbers or unique identifiers to ensure that the latest version of a file is 
+    served. This helps in cache management and ensures that users receive the most recent content when changes are made.
+
+👉 File Extension: The extension of the file being requested, indicating the type of content (e.g., .css for stylesheets, .js for JavaScript, 
+    .jpg or .png for images).

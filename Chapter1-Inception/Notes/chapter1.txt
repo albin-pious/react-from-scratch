@@ -30,3 +30,32 @@ In summary
 👉 A framework inverts the control of the program. It tells the developer what they need. A library doesn't. The programmer calls library where 
    and when they need it.
 👉 The degree of freedom a library or framework gives the developer will dictate how "opinionated" it is.
+
+///////////////// CDN /////////////////
+
+A Content Devilvery Network, abbreviated as CDN is an indispensable part of most mordern websites and applications.
+
+CDN is a globally distributed network consisting of servers that are capable of providing faster performance, lesser load time, and advanced
+security to website while publishing their content.
+
+Application Example: Let us assume you have created an e-Commerce website for your store and hosted it on a server in California. The content to 
+be displayed on your website, be it textual or image, or video, has to be loaded to the user's device upon request irrespective of where they 
+are located.
+    Now, a user in Rotterdam is requesting for the resources to be displayed on your website, which is called from the server situated in 
+California. Owing to the distance of about 5435 miles between the server in California and the user in Rotterdam, a few hundred milliseconds get
+added to the load time, which frustrates the end users and even impacts the search engine ranking of your website. This is where CDN unfolds its 
+potentials.
+
+Benefits of CDN
+👉  Faster loading time: Recall that CDN is a globally distributed network of servers. Now, these servers are different geographic loacations 
+    spread across the world and called CDN PoPs(Point of presence). Instead of delivering website resources from a server hosted in a cornor of 
+    world, CDN PoPs that is closest to the user's geographic location deliver your website content to the user's screen more quickly.
+👉  Website security: Since the CDN PoP is in the first layer of receiving incoming traffic, it masks your actual server under serveral layers.
+👉  Bandwidth cost reduction: Bandwidth consumption is a major concern for many websites of today. Through caching and other optimization 
+    techiques, CDN pulls less data than the original server would provide. 
+
+Type of CDN
+👉 Push CDN: Web content is pushed proactively from your hosted server to the CDN PoP nested near your end-user location. When the end-user 
+    requests web resources, the nearest CDN has a neat package populated with the web content. It then seamlessly delivers them to the browser.
+👉 Pull CDN: When it comes to pull CDN, the web content is cached in the nearest PoP server only after the first request has been made. Instead 
+    of calling the server every time, during the first request, the data is actually pulled from the hosted server and cached at CDN PoP servers.

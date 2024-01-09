@@ -126,4 +126,36 @@ various environments.
 
 Both React and ReactDOM both are available over a CDN.
 
+first One:
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+The versions above are only meant for development, and are not suitable for production. 
 
+second One:
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+Minified and optimized production versions of React are available at:
+
+When using React with CDN links, it’s important to understand the differences between the development (dev) and production (prod) links and when to
+use them appropriately.
+
+Development (Dev) Link:
+👉 The development link is typically used during the development phase of your application.
+👉 It includes additional debugging tools, warnings, and helpful error messages.
+👉 It is larger in file size and may negatively impact the performance of your application.
+👉 It is not optimised for production use.
+
+Production (Prod) Link:
+👉 The production link is meant for deploying your application in a production environment.
+👉 It excludes development-specific tools, warnings, and error messages.
+👉 It is smaller in file size, which improves the performance of your application.
+👉 It is optimized for production use.
+
+Using the development link in a production environment can lead to unnecessary debugging information being sent to the client, which may be a 
+security risk and can negatively affect performance.
+
+Conversely, using the production link during development may make it difficult to identify and debug issues because you won’t get helpful error
+messages and warnings.
+
+The development link is used during development to benefit from debugging tools and warnings, and you can switch to the production link when
+deploying your application to ensure optimal performance and security.

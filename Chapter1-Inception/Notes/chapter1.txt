@@ -159,3 +159,45 @@ messages and warnings.
 
 The development link is used during development to benefit from debugging tools and warnings, and you can switch to the production link when
 deploying your application to ensure optimal performance and security.
+
+///////////////// Async v/s Defer /////////////////
+
+When you load a webpage then there are two major things happening in your browser.
+👉 HTML parsing
+👉 The loading of the scripts
+
+The loading of the scripts contain two parts fetch script from the network and execute.
+
+Normal Scenario - Without Attribute
+  <script src="" />
+If your browser is parsing the HTML line by line suddenly encounters a script tag at a point browser has stops parsing at the point and fetch the
+script into the browser and run it there in then and the browser is continueous to start after the script is completly execute. It's not a good 
+partice.
+
+Async Attribute
+  <script async src="" />
+While using the async attribute meanwhile HTML parsing is going on any of the script with async tag fetch form the network asyncronounsly along 
+with the HTML parsing.
+    So as soon as the scripts are fetched and are available in the browser the HTML parsing is stops and the scripts are executed then there. When
+execution of the scripts completed the HTML parsing is continueous.
+    HTML parsing goes on and the script fetch work on parallel as soon as the script is fetch are available in the browser then scripts are 
+executed and only then HTML parsing continueous. At the time of script execution the HTML parsing is blocked/paushed, that is another way of 
+executing the scripts.
+
+Defer Attribute
+  <script defer src="" />
+In case of defer the HTML parsing goes on and script tag fetch in parallel and the script tag only executes when HTML parsing is fully completes.
+So its doesn't matter when the scripts are available in browser unlike async attribute it will only started executing the scripts only HTML 
+parsing is completed.
+
+These are how scripts are loaded in browser when you put defer attribute, async attribute or not put any attribute. But the important question is 
+when should I use what before? decieding what to use when we should first not it down important thing,
+   The important thing is the async attribute doesn't guarantee about the order of execution of scripts but defer does. What that means? If you 
+put async attribute in multiple script tag suppose you have multiple scripts which are depended on each other, some scripts are depened on each 
+other and some scripts are depend on each other you have multiple depended scripts. When using the async tag doesn't guarantee that these 
+scripts will executed in particular order in that case of you should use probably prefer 'defer'. Another example is suppose you have to load 
+some external scripts lets take a example of google analytical scripts or other analytical scripts which are quiet modular and are independant on
+normal code so in that case it makes sense to use async attribute and not use a defer otherwise mostly wise to use defer maintains the order of 
+execution of the scripts. So while your HTML parsing is going on the scripts are fetch from network and only executes when HTML parsing is
+completed.   
+

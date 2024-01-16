@@ -122,6 +122,57 @@ application’s resources.
 Parcel works great for building single or multi-page React applications. It includes a first-class development experience with Fast Refresh, and 
 supports JSX, TypeScript, Flow, and many styling methodologies out of the box.
 
+➡️ JSX
+
+Parcel supports JSX automatically when it detects you are using React. If you’re using React 17 or later, it also automatically enables the modern 
+JSX transform, which means you don't even need to import React for JSX to work, as you can see in App.js in the above example.
+
+➡️ Fast Refresh
+
+Parcel has first-class support for React Fast Refresh, which gives you quick feedback as you edit your code without needing to reload the page. 
+In most cases, it can preserve component state as code is edited, even if you make an error. In most cases, it can preserve component state as 
+code is edited, even if you make an error. See the Hot reloading docs for details on how this works.
+
+➡️ Dev Server
+
+Parcel’s builtin dev server is automatically started when you run the default parcel command, which is a shortcut for parcel serve. By default, it 
+starts a server at http://localhost:1234. If port 1234 is already in use, then a fallback port will be used. After Parcel starts, the location 
+where the dev server is listening will be printed to the terminal.
+
+➡️ Hot reloading
+
+➡️ Development target
+
+➡️ Lazy mode
+
+➡️ Caching
+
+➡️ HTTPS
+
+➡️ API proxy
+
+  Zero config
+
+Start with an HTML file. Add a <script> tag. Maybe some CSS. How about TypeScript? SASS? Images? No problem. Parcel works out of the box just as 
+you'd expect.
+    Parcel supports many languages and file types out of the box, from web technologies like HTML, CSS, and JavaScript, to assets like images, 
+fonts, videos, and more. And when you use a file type that isn't included by default, Parcel will automatically install all of the necessary 
+plugins and dev dependencies for you!
+
+///////////////// Transitive Dependency /////////////////
+
+    When we have build a production ready app it has big minification, bundling, which is cleaning up our code, which was use image compression, 
+which uses alot of things for minifying our file, then what will happen is we just do lot of things we have bundling, minification, optimization, 
+caching, differential bundling and so many things we have to do soem dependency on it. That dependency depends on other dependecy, those are 
+depend on other dependecy. This is a dependency tree and it called transitive dependency.
+
+///////////////// Browserlist /////////////////
+
+Browserlist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. 
+It's used by frameworks/libraries such as React,Angular and Vue, but not limited to them.
+
+
+
 
 
 

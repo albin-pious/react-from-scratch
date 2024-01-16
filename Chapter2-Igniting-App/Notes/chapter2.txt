@@ -171,6 +171,140 @@ depend on other dependecy. This is a dependency tree and it called transitive de
 Browserlist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. 
 It's used by frameworks/libraries such as React,Angular and Vue, but not limited to them.
 
+///////////////// NPM - a JavaScript package manager /////////////////
+
+    A dependency is a third-party bit of software that was probably written by someone else and ideally solves a single problem for you. A web 
+project can have any number of dependencies, ranging from none to many, and your dependencies might include sub-dependencies that you didn't 
+explicitly install — your dependencies may have their own dependencies.
+    Npm is the standard package manager of the Node.js ecosystem. It’s the most extensive online package repository, 
+containing over one-million packages. Also, it’s a command-line interface tool used by developers to manage their Node.js projects. Developers all 
+around the world use npm to share their software. React, Vue, Express, and Angular are some great examples.
+
+///////////////// Parcel/Webpack /////////////////
+
+Parcel and Webpack are both popular bundling tools used in web development. Here are some key differences between the two.
+
+🤔 Configuration
+    Webpack requires a configuration file (webpack.config.js) to define its behavior, whereas Parcel does not require any configuration by default. 
+    Parcel automatically detects and bundles the required assets without the need for explicit configuration, making it easier and quicker to set 
+    up.
+
+🤔 Zero Configuration
+    As mentioned earlier, Parcel does not require any configuration by default, making it a good choice for beginners or for simple projects where 
+    ease of use is a priority. On the other hand, Webpack offers more customization options through its configuration file, allowing developers to 
+    fine-tune the bundling process to suit specific project requirements.
+
+🤔 Asset Types
+    Webpack is more versatile when it comes to handling different types of assets. It provides loaders for various file types, like JavaScript, 
+    CSS, images, and fonts, enabling developers to process and optimize these assets. Parcel, on the other hand, supports a wide range of asset 
+    types out-of-the-box without the need for additional configuration or loaders.
+
+🤔 Hot Module Replacement (HMR)
+    HMR is a feature that allows developers to update the modules in the browser without refreshing the entire page. While both Parcel and Webpack 
+    support HMR, Webpack provides more fine-grained control and customization options over how the updates are handled. Webpack allows developers 
+    to define custom HMR behavior through Hot Module Replacement API, whereas Parcel handles HMR automatically without requiring any additional 
+    configuration.
+
+🤔 Performance
+    Parcel is often praised for its fast bundling speed, especially for small to medium-sized projects. It achieves this by utilizing caching and 
+    parallelizing the bundling process. Webpack, on the other hand, offers more advanced optimization techniques like tree-shaking and 
+    code-splitting, which are beneficial for larger and more complex projects, but may impact build times.
+
+🤔 Community and Ecosystem
+    Webpack has been around for a longer time and has a larger and more mature ecosystem. It has a wide range of plugins and loaders available, 
+    allowing developers to extend its functionality according to their needs. The community support and documentation for Webpack are also 
+    extensive. Parcel, while gaining popularity, has a smaller ecosystem compared to Webpack, which means fewer choices when it comes to extending 
+    or customizing the build pipeline.  
+
+In summary, Parcel offers zero-configuration setup and faster bundling speed, making it great for simple projects or beginners, while Webpack 
+provides more advanced customization options, better support for different asset types, and a larger community ecosystem, making it suitable for 
+more complex projects. 
+
+///////////////// .parcel-cache /////////////////
+
+The .cache folder (or .parcel-cache in parcel v2) stores information about your project when parcel builds it, so that when it rebuilds, it 
+doesn't have to re-parse and re-analyze everything from scratch. It's a key reason why parcel can be so fast in development mode. I think 
+committing it to git would be a bad idea - it would add a large number of (unnecessary) changes to your commit history, and it could easily get 
+out-of-sync with the code that generated it.
+
+///////////////// npx /////////////////
+
+The command npm is used to download JavaScript packages from Node Package Manager, and npx is used to execute JavaScript packages downloaded this 
+way. An npm package runner — helps to execute packages without installing explicitly.
+
+///////////////// dependencies vs devDependencies /////////////////
+
+🎈Dependencies
+    In the package.json file, there is an object called dependencies and it consists of all the packages that are used in the project with its 
+version number. So, whenever you install any library that is required in your project that library you can find it in the dependencies object. 
+syntax: npm install <package name>
+
+🎈Dev Dependencies
+    In package.json file, there is an object called as dev Dependencies and it consists of all the packages that are used in the project in its 
+development phase and not in the production or testing environment with its version number. So, whenever you want to install any library that is 
+required only in your development phase then you can find it in the dev Dependencies object. 
+syntax: npm install <package name> --save-dev   |||| instead of --save-dev we can use -D.
+
+🎈Peer Dependencies
+   In package.json file, there is an object called as peerDependencies and it consists of all the packages that are exactly required in the 
+project or to the person who is downloading and the version numbers should also be the same. That is the reason they were named as 
+peerDependencies. The best example is ‘react’ which is common in every project to run similarly. 
+
+///////////////// Tree Shaking /////////////////
+
+    Reduced size of application & improved performance plays an important role in success of a software. Tree Shaking is a concept in development 
+of eliminating dead code or unused code.
+    Imagine your application as a tree. All the libraries, components, widgets & code represents leaves. All the unused code, imports & dead code 
+represents the dead brown leaves. In order to clear dead leaves from trees you have to shake the tree to let them fall.
+    By implementing tree shaking practices website performance will get improved and reduce bundle size. Tree shaking depends on the static 
+structure of ES6 module syntax (import & export).
+    The reason tree shaking is very important is because most packages installed don’t really need all dependencies & this results in importing 
+full packages, however what really needed is a small part of that package.
+
+///////////////// Hot Module Replacement (HMR) for a React App /////////////////
+
+    Webpack HMR seems to be reliable. Whereas React Hot Loader from Dan Abramov is more ambitious, but less reliable. RHL attempts to preserve 
+local state in components, whereas HMR can preserve your redux store state, but won’t attempt to preserve local state that gets created by your 
+component files:
+    Hot-module-reloading lets us change the code of our application while maintaining our current state and position in the website. This allows 
+us to do things like tweak the styling of some page of our app without having to navigate all the way back to that page each time.
+
+///////////////// 5 superpowers of Parcel and describe any 3 of them in your own words. /////////////////
+
+🔥Hot Module Replacement
+
+   Hot Module Replacement (HMR) improves the development experience by automatically updating modules in the browser at runtime without needing a 
+whole page refresh. This means that application state can be retained as you change small things. Parcel's HMR implementation supports both 
+JavaScript and CSS assets. As you save files, Parcel rebuilds what changed and sends an update to any running clients containing the new code. 
+
+🔥Production
+  When it comes time to bundle your application for production, you can use Parcel's production mode.
+parcel build entry.js
+  This disables watch mode and hot module replacement so it will only build once. It also enables the minifier for all output bundles to reduce 
+file size. The minifiers used by Parcel are terser for JavaScript, cssnano for CSS, and htmlnano for HTML.
+  Enabling production mode also sets the NODE_ENV=production environment variable. Large libraries like React have development-only debugging 
+features which are disabled by setting this environment variable, which results in smaller and faster builds for production.
+
+🔥Image Optimization
+  Parcel also includes lossless image optimization for JPEGs and PNGs by default in production mode, which reduces the size of images without 
+affecting their quality. This does not require any query parameters or configuration to use. However, since the optimization is lossless, the 
+size reduction possible may be less than if you use the quality query param, or use a modern format such as WebP or AVIF.
+
+🔥Caching
+   Parcel caches everything it builds to disk. If you restart the dev server, Parcel will only rebuild files that have changed since the last time 
+it ran. Parcel automatically tracks all of the files, configuration, plugins, and dev dependencies that are involved in your build, and granularly 
+invalidates the cache when something changes. For example, if you change a configuration file, all of the source files that rely on that 
+configuration will be rebuilt.
+
+🔥Browser Compatibility
+   By default Parcel does not perform any transpilation of JavaScript syntax for older browsers. This means that if you write your code using 
+modern language features, that’s what Parcel will output. You can declare your app’s supported browsers using the browserslist field in your 
+package.json. When this field is declared, Parcel will transpile your code accordingly to ensure compatibility with your supported browsers.
+
+
+
+
+    
 
 
 

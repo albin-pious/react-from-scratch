@@ -1,0 +1,27 @@
+{
+  "name": "igniting-app",
+  "version": "1.0.0",
+  "description": "it was from practice session of react ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albin-pious/react-from-scratch.git"
+  },
+  "author": "Albin Pious",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albin-pious/react-from-scratch/issues"
+  },
+  "homepage": "https://github.com/albin-pious/react-from-scratch#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
